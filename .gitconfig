@@ -1,10 +1,24 @@
+[user]
+
+	name = Josh Hays
+	email = jphays@gmail.com
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+	# Pretty-print log including description, time, and author
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+
+	# Long output log including file changes
+	ll = log --name-status
+
 	# View the current working tree status using the short format
 	s = status -s
+
+	# View the current working tree status using diff stat
+	st = diff --stat
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
