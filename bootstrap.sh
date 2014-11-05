@@ -1,22 +1,35 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+dir=$(dirname "${BASH_SOURCE}");
+echo $dir
+cd "$dir";
 
 git pull origin master;
 
-function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -avh --no-perms . ~;
-	source ~/.bash_profile;
+files="\
+aliases \
+bash_profile \
+bash_prompt \
+bashrc \
+curlrc \
+editorconfig \
+exports \
+functions \
+gitconfig \
+gitignore \
+hushlogin \
+inputrc \
+screenrc \
+vim \
+vimrc \
+wgetrc"
+
+function makeSymlinks() {
+  for file in $files
+  do
+    ln -s "$dir/$file" "~/.$file"
+  done
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
-unset doIt;
+makeSymlinks;
+unset makeSymlinks;

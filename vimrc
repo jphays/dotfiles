@@ -153,21 +153,20 @@ set mat=2
 set hlsearch
 nmap <leader>sh :set invhlsearch<cr>
 
-  """"""""""""""""""""""""""""""
-  " Statusline
-  """"""""""""""""""""""""""""""
-  "Always show the statusline
-  set laststatus=2
+""""""""""""""""""""""""""""""
+" Statusline
+""""""""""""""""""""""""""""""
+"Always show the statusline
+set laststatus=2
 
-  function! CurDir()
-     let curdir = substitute(getcwd(), '/home/jphays/', "~/", "g")
-     return curdir
-  endfunction
+function! CurDir()
+   let curdir = substitute(getcwd(), '/home/jphays/', "~/", "g")
+   return curdir
+endfunction
 
-  "Format the statusline
-  "set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-  set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ %=Line:\ %l/%L:%c
-
+"Format the statusline
+"set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ %=Line:\ %l/%L:%c
 
 
 """"""""""""""""""""""""""""""
@@ -397,6 +396,16 @@ map <F9> ggVGg?
 set nobackup
 set writebackup
 "set noswapfile
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+  set undodir=~/.vim/undo
+endif
+
+" Don’t create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
