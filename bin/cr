@@ -1,0 +1,2 @@
+cp "/Users/joshhays/Library/Application Support/Dungeon Crawl Stone Soup/saves/Elsyx.cs.bak" "/Users/joshhays/Library/Application Support/Dungeon Crawl Stone Soup/saves/Elsyx.cs"
+rm /Users/joshhays/Library/Application\ Support/Dungeon\ Crawl\ Stone\ Soup/saves/bones.*
