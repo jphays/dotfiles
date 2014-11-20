@@ -54,6 +54,12 @@ install tree
 install webkit2png
 #install zopfli
 
+# Other fun stuff
+install figlet
+install fortune
+install cowsay
+
+
 #install homebrew/versions/lua52
 
 # Remove outdated versions from the cellar
