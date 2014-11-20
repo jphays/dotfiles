@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 dir=$(dirname "${BASH_SOURCE}");
-echo $dir
 cd "$dir";
 
 git pull origin master;
@@ -20,6 +19,7 @@ gitignore \
 hushlogin \
 inputrc \
 screenrc \
+tmux.conf \
 vim \
 vimrc \
 wgetrc"
@@ -27,7 +27,7 @@ wgetrc"
 function makeSymlinks() {
   for file in $files
   do
-    ln -s "$dir/$file" "~/.$file"
+    ln -s "$dir/$file" "$HOME/.$file"
   done
 }
 
