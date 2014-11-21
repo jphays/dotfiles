@@ -6,6 +6,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Install Pathogen
+execute pathogen#infect()
+
 "Get out of VI's compatible mode..
 set nocompatible
 
@@ -128,7 +131,7 @@ set hid
 "Set backspace
 set backspace=eol,start,indent
 
-"Bbackspace and cursor keys wrap to
+"Backspace and cursor keys wrap to
 "set whichwrap+=<,>,h,l
 
 "Ignore case when searching
