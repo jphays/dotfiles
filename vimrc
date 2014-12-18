@@ -6,18 +6,33 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Install Pathogen
-execute pathogen#infect()
 
 "Get out of VI's compatible mode..
 set nocompatible
 
-"Sets how many lines of history VIM har to remember
-set history=400
+"Setup Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"Install plugins
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'bling/vim-airline'
+
+call vundle#end()
 
 "Enable filetype plugin
 filetype plugin on
 filetype indent on
+
+"Sets how many lines of history VIM has to remember
+set history=400
 
 "Set to auto read when a file is changed from the outside
 set autoread
@@ -169,7 +184,11 @@ endfunction
 
 "Format the statusline
 "set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ %=Line:\ %l/%L:%c
+"set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ %=Line:\ %l/%L:%c
+
+"Configure vim-airline
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 
 """"""""""""""""""""""""""""""
