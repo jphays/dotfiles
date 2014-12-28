@@ -1,2 +1,5 @@
+/vim/backups/*
 /vim/bundle/*
 !/vim/bundle/Vundle.vim/
+/vim/swaps/*
+/vim/undo/*
