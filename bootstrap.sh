@@ -17,6 +17,7 @@ functions \
 gitconfig \
 gitignore \
 hushlogin \
+inorc \
 inputrc \
 screenrc \
 tmux.conf \
