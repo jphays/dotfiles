@@ -34,3 +34,5 @@ function makeSymlinks() {
 
 makeSymlinks;
 unset makeSymlinks;
+
+git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
