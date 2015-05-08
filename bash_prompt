@@ -112,10 +112,20 @@ PS1+="\[${white}\]@";
 PS1+="\[${black}\]\h"; # host
 PS1+="\[${white}\]:";
 PS1+="\[${green}\]\w"; # working directory
-PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
-PS1+="\n";
-PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+# PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
+# PS1+="\n";
+PS1+=" ";
+#PS1+="\[${cyan}\]\$ \[${reset}\]"; # `$` (and reset color)
+
+# Prompt character ideas:
+# # : · » › > → ‖
+# ≡ ± ∆ ∑ ∞ = ∫ ≈ ∙
+# ¤ ◊ ⌂ ■ ▪ ▸ ► ○ ● ♦
+# Δ Λ Ξ Σ λ φ ψ Ϟ Ϡ Ϫ ϰ
+# Ɣ ɣ ɤ ǁ ǂ Ɨ ƽ ƾ ƕ
+
+PS1+="\[${yellow}\]» \[${reset}\]"; # `λ` (and reset color)
 export PS1;
 
-PS2="\[${yellow}\]→ \[${reset}\]";
+PS2="\[${yellow}\]≡ \[${reset}\]";
 export PS2;
