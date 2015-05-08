@@ -115,6 +115,8 @@ set ffs=unix,dos,mac
 nmap <leader>fd :se ff=dos<cr>
 nmap <leader>fu :se ff=unix<cr>
 
+"Syntax file types
+au BufNewFile,BufRead *.ino set filetype=arduino
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
