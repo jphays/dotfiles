@@ -1,0 +1,26 @@
+    "schemes":
+    [
+        {
+            "background": "#121212",
+            "black": "#121212",
+            "blue": "#435E87",
+            "brightBlack": "#454545",
+            "brightBlue": "#587AA4",
+            "brightCyan": "#A3BABF",
+            "brightGreen": "#BEED5F",
+            "brightPurple": "#46A4FF",
+            "brightRed": "#FF669D",
+            "brightWhite": "#FDFDFD",
+            "brightYellow": "#FECF35",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#5E7175",
+            "foreground": "#EEEEEE",
+            "green": "#A6E22E",
+            "name": "Elsyx",
+            "purple": "#789EC6",
+            "red": "#C23669",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DCDCDC",
+            "yellow": "#FD971F"
+        }
+    ]
