@@ -151,6 +151,17 @@
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
 	default = matching
 
+[pull]
+
+	rebase = true
+
+[filter "lfs"]
+
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
 # URL shorthands
 
 [url "git@github.com:"]
