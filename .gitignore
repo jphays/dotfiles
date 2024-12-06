@@ -3,3 +3,6 @@
 !/vim/bundle/Vundle.vim/
 /vim/swaps/*
 /vim/undo/*
+/vim/.netrwhist
+.aider*
+.env
