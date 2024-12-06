@@ -29,6 +29,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'pgdouyon/vim-evanesco'
 Plugin 'bling/vim-airline'
+Plugin 'romainl/vim-cool'
 
 call vundle#end()
 
