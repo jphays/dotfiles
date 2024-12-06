@@ -22,6 +22,9 @@ else # OS X `ls`
 	colorflag="-G"
 fi
 
+# Expose useful binaries from container
+alias ollama="podman exec -it ollama ollama"
+
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
